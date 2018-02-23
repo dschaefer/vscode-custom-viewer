@@ -8,7 +8,7 @@ viewer that can be opened by selecting items in a view on the Explorer.
 
 And this is the end result.
 
-<img src="https://github.com/dschaefer/vscode-custom-viewer/blob/master/images/Capture.png?raw=true" style="display: block; margin: 0 auto; width: 600px;">
+<img src="https://raw.githubusercontent.com/dschaefer/vscode-custom-viewer/18de5338b6bc6a5455efea521255dde6e6d28558/images/Capture.png" style="display: block; margin: 0 auto; width: 600px;">
 
 ## Try it out
 
