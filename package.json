@@ -1,0 +1,87 @@
+{
+    "name": "custom-viewer",
+    "displayName": "custom-viewer",
+    "description": "Sample Custom Viewer",
+    "version": "0.0.1",
+    "publisher": "cdtdoug",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.20.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "keybindings": [
+            {
+                "key": "Ctrl+O",
+                "command": "_webview.openDevTools"
+            }
+        ],
+        "views": {
+            "explorer": [
+                {
+                    "id": "helloItems",
+                    "name": "Hello Items"
+                }
+            ]
+        },
+        "commands": [
+            {
+                "command": "hello.add",
+                "title": "Add"
+            },
+            {
+                "command": "hello.delete",
+                "title": "Delete"
+            },
+            {
+                "command": "hello.open",
+                "title": "Open"
+            }
+        ],
+        "menus": {
+            "view/title": [
+                {
+                    "command": "hello.add",
+                    "when": "view == helloItems"
+                }
+            ],
+            "view/item/context": [
+                {
+                    "command": "hello.delete",
+                    "when": "view == helloItems && viewItem == helloItem"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "yarn build",
+        "build": "gulp build",
+        "watch": "gulp watch",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run build && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/express": "^4.11.1",
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^7.0.43",
+        "eslint": "^4.18.1",
+        "gulp": "^3.9.1",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-typescript": "^4.0.1",
+        "gulp-util": "^3.0.8",
+        "run-sequence": "^2.2.1",
+        "tslint": "^5.8.0",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.10",
+        "webpack": "^3.11.0"
+    },
+    "dependencies": {
+        "express": "^4.16.2"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "custom-viewer-client",
+    "version": "0.0.1",
+    "description": "Client code for custom viewer",
+    "author": "Doug Schaefer",
+    "license": "MIT",
+    "dependencies": {
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0"
+    },
+    "devDependencies": {
+        "@types/react": "^16.0.38",
+        "@types/react-dom": "^16.0.4",
+        "ts-loader": "^3.5.0"
+    }
+}
