@@ -63,7 +63,7 @@
         "vscode:prepublish": "yarn build",
         "build": "gulp build",
         "watch": "gulp watch",
-        "postinstall": "node ./node_modules/vscode/bin/install",
+        "postinstall": "node ./postinstall.js",
         "test": "npm run build && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {

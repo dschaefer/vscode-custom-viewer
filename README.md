@@ -3,6 +3,19 @@
 This is a very simple extension that illustrates how to build a custom
 viewer that can be opened by selecting items in a view on the Explorer.
 
+## Try it out
+
+To build run
+
+```
+yarn
+yarn build
+```
+To launch it, open up in VS Code and run the Extension
+launch.
+
+## Description
+
 The highlight of the architecture is a typical web client/server.
 The server is the VS Code extension which starts an http server
 and uses Express to manage routes. The client is a typical client
