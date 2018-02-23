@@ -161,7 +161,7 @@ We grab the item string and simply return it back with a hello.
 
 And this is the end result.
 
-![screenshot](https://github.com/dschaefer/vscode-custom-viewer/raw/master/Capture.png "Screenshot")
+![screenshot](https://github.com/dschaefer/vscode-custom-viewer/blob/master/images/Capture.png?raw=true "Screenshot")
 
 ## The gulp build
 
