@@ -1,7 +1,10 @@
-# VS Code extension with a tree view and a viewer for the elements
+# VS Code extension with a tree view and a viewer
 
 This is a very simple extension that illustrates how to build a custom
 viewer that can be opened by selecting items in a view on the Explorer.
+
+> Note: I learned a lot of this from the Arduino extension for VS Code.  
+> https://github.com/Microsoft/vscode-arduino
 
 ## Try it out
 
