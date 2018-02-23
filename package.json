@@ -22,14 +22,6 @@
                 "command": "_webview.openDevTools"
             }
         ],
-        "views": {
-            "explorer": [
-                {
-                    "id": "helloItems",
-                    "name": "Hello Items"
-                }
-            ]
-        },
         "commands": [
             {
                 "command": "hello.add",
@@ -44,6 +36,14 @@
                 "title": "Open"
             }
         ],
+        "views": {
+            "explorer": [
+                {
+                    "id": "helloItems",
+                    "name": "Hello Items"
+                }
+            ]
+        },
         "menus": {
             "view/title": [
                 {
