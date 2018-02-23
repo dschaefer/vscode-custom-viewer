@@ -6,6 +6,10 @@ viewer that can be opened by selecting items in a view on the Explorer.
 > Note: I learned a lot of this from the Arduino extension for VS Code.  
 > https://github.com/Microsoft/vscode-arduino
 
+And this is the end result.
+
+<img src="https://github.com/dschaefer/vscode-custom-viewer/blob/master/images/Capture.png?raw=true" style="display: block; margin: 0 auto; width: 600px;">
+
 ## Try it out
 
 To build run
@@ -161,10 +165,6 @@ On the server side, we set up Express and implement the route to get the ```Hell
 ```
 
 We grab the item string and simply return it back with a hello.
-
-And this is the end result.
-
-![screenshot](https://github.com/dschaefer/vscode-custom-viewer/blob/master/images/Capture.png?raw=true "Screenshot")
 
 ## The gulp build
 
