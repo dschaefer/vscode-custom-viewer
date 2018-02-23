@@ -1,3 +1,7 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) QNX Software Systems. All rights reserved.
+ *  Licensed under the MIT License. See LICENSE.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 import { TextDocumentContentProvider, Uri, CancellationToken, ProviderResult, ExtensionContext, workspace } from "vscode";
 import * as http from 'http';
 import * as express from 'express';
