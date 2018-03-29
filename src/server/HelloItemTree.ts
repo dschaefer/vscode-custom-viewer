@@ -11,7 +11,7 @@ export class HelloItemTree implements TreeDataProvider<string> {
 
     private items: string[] = [];
 
-    constructor(private context: ExtensionContext, private port: number) {
+    constructor(private context: ExtensionContext) {
         context.subscriptions.push(window.registerTreeDataProvider('helloItems', this));
 
         context.subscriptions.push(commands.registerCommand('hello.add', () => this.add()));
