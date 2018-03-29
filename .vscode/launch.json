@@ -11,8 +11,7 @@
             "request": "launch",
             "runtimeExecutable": "${execPath}",
             "args": [
-                "--extensionDevelopmentPath=${workspaceFolder}",
-                "--enable-proposed-api"
+                "--extensionDevelopmentPath=${workspaceFolder}"
             ],
             "outFiles": [
                 "${workspaceFolder}/out/**/*.js"
@@ -25,8 +24,7 @@
             "runtimeExecutable": "${execPath}",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
-                "--extensionTestsPath=${workspaceFolder}/out/test",
-                "--enable-proposed-api"
+                "--extensionTestsPath=${workspaceFolder}/out/test"
             ],
             "outFiles": [
                 "${workspaceFolder}/out/test/**/*.js"
