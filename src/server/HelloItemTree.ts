@@ -3,6 +3,7 @@
  *  Licensed under the MIT License. See LICENSE.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 import { TreeDataProvider, ExtensionContext, window, TreeItem, TreeItemCollapsibleState, commands, Uri, ViewColumn, EventEmitter, Event } from "vscode";
+import { HelloEditor } from './HelloEditor';
 
 export class HelloItemTree implements TreeDataProvider<string> {
 	private _onDidChangeTreeData: EventEmitter<string | undefined> = new EventEmitter<string | undefined>();
@@ -43,7 +44,7 @@ export class HelloItemTree implements TreeDataProvider<string> {
         }).then(item => {
             this.items.push(item);
             this._onDidChangeTreeData.fire();
-        })
+        });
     }
 
     public delete(node: string) {
@@ -52,11 +53,6 @@ export class HelloItemTree implements TreeDataProvider<string> {
     }
 
     public open(node: string) {
-        commands.executeCommand(
-            'vscode.previewHtml',
-            Uri.parse(`hello://${node}`),
-            ViewColumn.One,
-            node
-        );
+        let editor = new HelloEditor(this.context, node);
     }
 }

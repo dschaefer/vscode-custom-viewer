@@ -17,17 +17,17 @@ export class Hello extends React.Component<{}, HelloState> {
             msg: { msg: "Loading..." }
         };
 
-        this.hi().then(msg => {
-            this.setState({ msg: msg });
-        })
-    }
+        window.parent.postMessage({
+            type: 'hi',
+            node: window._hello.item
+        }, '*');
 
-    private request(url: string): Promise<any> {
-        return fetch(new Request(window._hello.server + url)).then(res => res.json());
-    }
-
-    private hi(): Promise<HelloMsg> {
-        return this.request(`/hi?item=${window._hello.item}`);
+        window.addEventListener('message', e => {
+            switch(e.data.type) {
+                case 'hi':
+                    this.setState({msg: e.data.msg});
+            }
+        });
     }
 
     render() {
