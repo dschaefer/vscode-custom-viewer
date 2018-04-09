@@ -8,6 +8,7 @@
     "engines": {
         "vscode": "^1.20.0"
     },
+    "enableProposedApi": true,
     "categories": [
         "Other"
     ],
@@ -16,11 +17,10 @@
     ],
     "main": "./out/extension",
     "contributes": {
-        "enableProposedApi": true,
         "keybindings": [
             {
                 "key": "Ctrl+O",
-                "command": "_webview.openDevTools"
+                "command": "workbench.action.webview.openDeveloperTools"
             }
         ],
         "commands": [

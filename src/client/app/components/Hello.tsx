@@ -3,10 +3,9 @@
  *  Licensed under the MIT License. See LICENSE.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 import * as React from 'react';
-import { HelloMsg } from 'common/HelloMsg';
 
 export interface HelloState {
-    msg: HelloMsg;
+    msg: string;
 }
 
 export class Hello extends React.Component<{}, HelloState> {
@@ -14,12 +13,11 @@ export class Hello extends React.Component<{}, HelloState> {
         super(props);
 
         this.state = {
-            msg: { msg: "Loading..." }
+            msg: "Loading..."
         };
 
         window.parent.postMessage({
-            type: 'hi',
-            node: window._hello.item
+            type: 'hi'
         }, '*');
 
         window.addEventListener('message', e => {
@@ -34,7 +32,7 @@ export class Hello extends React.Component<{}, HelloState> {
         return (
             <div>
                 <h2>Custom Viewer</h2>
-                <p>{this.state.msg.msg}</p>
+                <p>{this.state.msg}</p>
             </div>
         );
     }
